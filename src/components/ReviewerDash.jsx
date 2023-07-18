@@ -50,18 +50,18 @@ export default function ReviewerDash() {
         </div>
          <div className="flex p-2 items-start space-y-2 rounded-full border border-gray-300">
             <div className="flex items-center gap-4">
-            <div className="flex flex-col items-center gap-2 p-2">
+            {/* <div className="flex flex-col items-center gap-2 p-2">
                 <p>Approved</p>
                 <p>34</p>
             </div>
-            <img src={Rectangle} alt="" />
+            <img src={Rectangle} alt="" /> */}
             <div className=" flex flex-col items-center gap-2 ">
-                <p>Decline</p>
-                <p>2</p>
+                <p>Pending Review </p>
+                <p>5</p>
             </div>
             <img src={Rectangle} alt="" />
             <div className="flex flex-col items-center gap-2">
-                <p>In-review</p>
+                <p>Review Papers</p>
                 <p>2</p>
             </div>
             </div>

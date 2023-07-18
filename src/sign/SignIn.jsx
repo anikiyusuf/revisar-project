@@ -19,20 +19,20 @@ function openReviewer(){
 
   return (
     <>  
-        <div>
+      
                  <div className="flex flex-col justify-center h-24 ml-12 items-start gap-2 w-[1240px] p-3 rounded-md  backdrop-blur-lg">
                 <img src={Frame2} alt="logo"/>
                 </div>
                 <div className="flex items-center justify-center h-[560px] gap-24">
-           <div className=" p-8 w-80 flex-col items-center gap-10 rounded-md bg-[#fdfcf8]">
+           <div className=" p-8 w-80  items-center gap-10 rounded-md bg-[#fdfcf8] relative">
          <p>Welcome Back</p>
        <div className="flex gap-4">
-        <div onClick={openAuth} className=""> <p className="whitespace-nowrap hover:border-b-2 border-red-500">I am  an Author </p>
+        <div onClick={openAuth} className=""> <p className="whitespace-nowrap  hover:border-b-2 border-red-500">I am  an Author </p>
         <br/>
-        <>{sign ? (<AuthSignIn />) :""}</>
+        <div className="relative block">{sign ? (<AuthSignIn/>) :""}</div>
         </div>
        <div onClick={openReviewer} className="">
-       <p className="whitespace-nowrap hover:border-b-2 border-red-500">I am a Reviewer</p> 
+       <p className="whitespace-nowrap absolute hover:border-b-2 border-red-500">I am a Reviewer</p> 
        <br/>
        <div className="-ml-24">{sign?"":(<ReviewSignIn/>)}</div>
       </div>
@@ -43,7 +43,7 @@ function openReviewer(){
   </div>
     <Carousel images={images}/>
 </div>
-  </div>
+
     </>
   )
 }

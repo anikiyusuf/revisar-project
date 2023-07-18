@@ -22,8 +22,8 @@ function openReviewerSign(){
           <div className="flex flex-col justify-center items-start gap-2 flex-shrink-0 w-[1240px] h-90 p-3">
                 <img src={Frame2} alt="logo"/>
                 </div>
-     <div className="flex items-center justify-center h-[760px] gap-24">
-        <div className="p-8 flex-col items-center gap-10 rounded-lg bg-[#fdfcf8] block">
+     <div className="flex items-center justify-center  gap-24">
+        <div className="p-8 flex-col items-center gap-10 rounded-lg bg-[#fdfcf8]">
            <p>Create an Account</p>
            <div className="flex gap-4">
            <div onClick={openAuthSign}>
@@ -37,7 +37,7 @@ function openReviewerSign(){
        </div>
        </div>
        </div>
-       <Link to="/SignIn" style={{ textDecoration:"none" , paddingRight:"1rem" , color:"black" , fontSize:"1rem", }}>SignIn</Link>
+  <p><Link to="/SignIn">SignIn</Link></p>
      </div>
 <Carousel images={images}/>
     </div>

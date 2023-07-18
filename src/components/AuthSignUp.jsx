@@ -2,7 +2,7 @@
 export default function AuthSignUp() {
   return (
     <>
-    <div className="absolute block">
+    <div className="">
         <form>
         <label htmlFor="name">Full Name</label><br/>
             <input type="text" className="flex w-[230px] h-10 p-3.5 flex-col justify-center items-start gap-2 rounded-sm border border-gray-300" required/><br/>
