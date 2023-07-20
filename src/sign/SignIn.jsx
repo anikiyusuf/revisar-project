@@ -24,22 +24,14 @@ function openReviewer(){
                 <img src={Frame2} alt="logo"/>
                 </div>
                 <div className="flex items-center justify-center h-[560px] gap-24">
-           <div className=" p-8 w-80  items-center gap-10 rounded-md bg-[#fdfcf8] relative">
-         <p>Welcome Back</p>
-       <div className="flex gap-4">
-        <div onClick={openAuth} className=""> <p className="whitespace-nowrap  hover:border-b-2 border-red-500">I am  an Author </p>
-        <br/>
-        <div className="relative block">{sign ? (<AuthSignIn/>) :""}</div>
-        </div>
-       <div onClick={openReviewer} className="">
-       <p className="whitespace-nowrap absolute hover:border-b-2 border-red-500">I am a Reviewer</p> 
-       <br/>
-       <div className="-ml-24">{sign?"":(<ReviewSignIn/>)}</div>
-      </div>
-    </div>
-   
-    <p className="">New user ? <Link to="/SignUp">Create an account</Link></p>
- 
+         <div className=" p-8 w-80  items-center gap-10 rounded-md bg-[#fdfcf8] relative">
+  <p className="text-center">Welcome Back</p>
+<div className="flex gap-3 border-b-2 border-[#D0BFBF] ">
+  <div className="whitespace-nowrap  hover:border-b-2 border-red-500"  onClick={openAuth}>I am an Author</div>
+  <div className="whitespace-nowrap  hover:border-b-2 border-red-500" onClick={openReviewer}>I am  a Reviewer</div>
+</div>
+    {sign ? (<AuthSignIn/>): (<ReviewSignIn/>)}
+  <p className="text-center">New user ? <Link to="/SignUp" className="text-[#d3455b]">Create an account</Link></p>
   </div>
     <Carousel images={images}/>
 </div>

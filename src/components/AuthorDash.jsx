@@ -3,10 +3,16 @@ import Ellipse from "../assets/Ellipse 13.png"
 import Arrow from "../assets/Arrow - Down 2.png"
 import Frame1434 from "../assets/Frame 1434.png"
 import Rectangle from "../assets/Rectangle 13.png"
+import "../App.scss"
+import { useState} from "react"
+import Modal from "../components/Modal"
 
 export default function AuthorDash() {
+
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
+
     <div className="AuthorDash">
        <div className="flex  ml-10 w-[1260px] h-86 p-10 justify-between items-center flex-shrink-0 rounded-8 bg-[#F5EEE0] backdrop-filter backdrop-blur-lg">
               <div className="logo mr-4">
@@ -67,7 +73,8 @@ export default function AuthorDash() {
             </div>
          </div>
         </div>
-        <button className="text-white ml-20 inline-flex h-4 px-10 py-6 justify-center items-center gap-8 flex-shrink-0 rounded-md bg-red-500">+ Submit New Mauscript</button>
+        <button className="text-white ml-20 inline-flex h-4 px-10 py-6 justify-center items-center gap-8 flex-shrink-0 rounded-md bg-red-500"  onClick={() => setIsOpen(true)} >+ Submit New Mauscript</button>
+        {isOpen && <Modal setIsOpen={setIsOpen} />}
      </div>
      </div>
     </section>

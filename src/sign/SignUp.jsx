@@ -5,41 +5,36 @@ import { images  } from "../imageDummy"
 import Carousel from "../components/Carousel"
 import Frame2 from "../assets/Frame 2.png" 
 export default function SignUp() {
-    const [sign , setSign ] = useState(false)
+    const [signUp , setSignUp ] = useState(false)
 
 
  function openAuthSign(){
-    setSign(true)
+    setSignUp(true)
 }
 
 function openReviewerSign(){
-     setSign(false)
+     setSignUp(false)
 }
 
   return (
     <>
 
-          <div className="flex flex-col justify-center items-start gap-2 flex-shrink-0 w-[1240px] h-90 p-3">
+          <div className="flex flex-col justify-center h-24 ml-12 items-start gap-2 w-[1240px] p-3 rounded-md  backdrop-blur-lg">
                 <img src={Frame2} alt="logo"/>
                 </div>
-     <div className="flex items-center justify-center  gap-24">
-        <div className="p-8 flex-col items-center gap-10 rounded-lg bg-[#fdfcf8]">
-           <p>Create an Account</p>
-           <div className="flex gap-4">
-           <div onClick={openAuthSign}>
-          <p className="whitespace-nowrap hover:border-b-2 border-red-500">I am  an Author</p> 
-         <div>{sign ? (<AuthSignUp />) :""}
-         </div>
-        </div>
-      <div onClick={openReviewerSign}>
-        <p className="whitespace-nowrap hover:border-b-2 border-red-500"> I am a Reviewer</p>
-       <div>  {sign?"":(<ReviewerSignUp/>)}
-       </div>
-       </div>
-       </div>
-  <p><Link to="/SignIn">SignIn</Link></p>
+     <div className="flex items-center justify-center h-[760px] gap-24">
+     <div className=" p-8 w-80  items-center gap-12 rounded-md bg-[#fdfcf8] relative">
+     <p className="text-center"> I am a Reviewer</p>
+      <div className="flex gap-3 border-b-2 border-[#D0BFBF]">
+        <div className="whitespace-nowrap hover:border-b-2 border-red-500" onClick={openAuthSign}>I am an Author</div>
+        <div className="whitespace-nowrap hover:border-b-2 border-red-500" onClick={openReviewerSign}> I am a Reviewer</div>
      </div>
-<Carousel images={images}/>
+     {signUp?(<AuthSignUp/>):(<ReviewerSignUp/>)}
+ <p className="text-center"> <Link to="/SignIn">SignIn</Link> </p>
+     </div>
+     <div className="-mt-96">
+    <Carousel images={images}/>
+    </div>
     </div>
     
     </>
